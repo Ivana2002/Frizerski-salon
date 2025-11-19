@@ -22,11 +22,14 @@ Svi korisnici imaju pristup personalizaciji – mogu promijeniti **temu interfej
 
 Nakon pokretanja aplikacije, korisniku se prikazuje prozor za prijavu, na kom se očekuje da unese **korisničko ime** i **lozinku**.
 
+
 ![Prijava](images/login.png)
+
 
 Ukoliko kredencijali nisu ispravni, pojavljuje se poruka:
 
 > **Pogrešno korisničko ime ili lozinka!**
+
 ![Prijava](images/pogresanLogin.png)
 
 Nakon uspješne prijave, korisniku se prikazuje **glavni meni** prilagođen njegovoj ulozi.
@@ -38,7 +41,9 @@ Nakon uspješne prijave, korisniku se prikazuje **glavni meni** prilagođen njeg
 Nakon prijave, otvara se **glavna stranica „Usluge u toku“**, koja prikazuje sve aktivne usluge sa mogućnošću **završavanja** i **automatskog izdavanja računa**.
 
 Radnici vide sledeće opcije u meniju:
+
 ![Glavni meni](images/main-menuRadnik.png)
+
 - **Usluge** → Pregled usluga
 - **Rezervacije** → Kreiranje i pregled rezervacija
 - **Računi** → Pregled računa i pretraga po datumu
@@ -46,8 +51,8 @@ Radnici vide sledeće opcije u meniju:
 
 Administrator vidi sve ove opcije, plus:
 ![Glavni meni](images/main-menuAdministrator.png)
-- **Postavke** → Upravljanje korisnicima, promena teme i jezika
 
+- **Postavke** → Upravljanje korisnicima, promena teme i jezika
 
 
 ---
@@ -65,6 +70,7 @@ Administrator može:
 - **Dodati novu uslugu** – unosom svih potrebnih podataka
 - **Obrisati uslugu** – klikom na ❌ pored usluge
 - **Pretražiti uslugu po nazivu** - unosom željene usluge
+- 
 ![Pregled usluga](images/servicesAdministrator.png)
 
 Radnici mogu samo **pregledati** i **pretraživati usluge** po nazivu.
@@ -104,6 +110,7 @@ Svi korisnici mogu pregledati postojеće rezervacije sa:
 Administrator i radnik mogu **započeti** rezervaciju (prebaciti u „u_toku“) i **završiti** je (izdati račun).
 
 ![Kreiranje rezervacije](images/zakazane-reservation.png)
+
 ![Kreiranje rezervacije](images/u-toku-reservation.png)
 
 ---
@@ -132,6 +139,8 @@ U tabeli se prikazuje:
 - Ukupna cijena
 
 ![Pregled računa](images/pregled-racuna.png)
+
+
 ![Pregled računa](images/pretraga-racuna.png)
 
 ---
@@ -150,7 +159,9 @@ Svaki korisnik ima:
 - Jezik
 
 ![Upravljanje korisnicima](images/dodajKorisnika.png)
+
 ![Upravljanje korisnicima](images/urediKorisnika.png)
+
 ![Upravljanje korisnicima](images/obrisiKorisnika.png)
 
 ---
