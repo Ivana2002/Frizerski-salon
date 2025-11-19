@@ -22,12 +22,12 @@ Svi korisnici imaju pristup personalizaciji – mogu promijeniti **temu interfej
 
 Nakon pokretanja aplikacije, korisniku se prikazuje prozor za prijavu, na kom se očekuje da unese **korisničko ime** i **lozinku**.
 
-![Prijava](./docs/images/login.png)
+![Prijava](images/login.png)
 
 Ukoliko kredencijali nisu ispravni, pojavljuje se poruka:
 
 > **Pogrešno korisničko ime ili lozinka!**
-![Prijava](./docs/images/pogresanLogin.png)
+![Prijava](images/pogresanLogin.png)
 
 Nakon uspješne prijave, korisniku se prikazuje **glavni meni** prilagođen njegovoj ulozi.
 
@@ -38,14 +38,14 @@ Nakon uspješne prijave, korisniku se prikazuje **glavni meni** prilagođen njeg
 Nakon prijave, otvara se **glavna stranica „Usluge u toku“**, koja prikazuje sve aktivne usluge sa mogućnošću **završavanja** i **automatskog izdavanja računa**.
 
 Radnici vide sledeće opcije u meniju:
-![Glavni meni](docs/images/main-menuRadnik.png)
+![Glavni meni](images/main-menuRadnik.png)
 - **Usluge** → Pregled usluga
 - **Rezervacije** → Kreiranje i pregled rezervacija
 - **Računi** → Pregled računa i pretraga po datumu
 
 
 Administrator vidi sve ove opcije, plus:
-![Glavni meni](docs/images/main-menuAdministrator.png)
+![Glavni meni](images/main-menuAdministrator.png)
 - **Postavke** → Upravljanje korisnicima, promena teme i jezika
 
 
@@ -65,11 +65,11 @@ Administrator može:
 - **Dodati novu uslugu** – unosom svih potrebnih podataka
 - **Obrisati uslugu** – klikom na ❌ pored usluge
 - **Pretražiti uslugu po nazivu** - unosom željene usluge
-![Pregled usluga](docs/images/servicesAdministrator.png)
+![Pregled usluga](images/servicesAdministrator.png)
 
 Radnici mogu samo **pregledati** i **pretraživati usluge** po nazivu.
 
-![Pregled usluga](docs/images/servicesRadnik.png)
+![Pregled usluga](images/servicesRadnik.png)
 
 ---
 
@@ -85,7 +85,7 @@ Radnici mogu kreirati novu rezervaciju za klijenta:
 
 Nakon kreiranja, rezervacija se automatski prikazuje u **„Usluge u toku“**.
 
-![Kreiranje rezervacije](docs/images/create-reservation.png)
+![Kreiranje rezervacije](images/create-reservation.png)
 
 
 
@@ -99,12 +99,12 @@ Svi korisnici mogu pregledati postojеće rezervacije sa:
 - Datumom
 - Statusom (**zakazano**, **u_toku**, **zavrseno**)
 
-  ![Pregled rezervacija](docs/images/pregled-reservations.png)
+  ![Pregled rezervacija](images/pregled-reservations.png)
 
 Administrator i radnik mogu **započeti** rezervaciju (prebaciti u „u_toku“) i **završiti** je (izdati račun).
 
-![Kreiranje rezervacije](docs/images/zakazane-reservation.png)
-![Kreiranje rezervacije](docs/images/u-toku-reservation.png)
+![Kreiranje rezervacije](images/zakazane-reservation.png)
+![Kreiranje rezervacije](images/u-toku-reservation.png)
 
 ---
 
@@ -117,7 +117,7 @@ Nakon završetka usluge (klikom na „✅ Završi“), sistem **automatski**:
 2. Kreira račun sa brojem, datumom i klijentom
 3. Čuva račun u bazi
 
-![Izdavanje računa](docs/images/izdavanje-racuna.png)
+![Izdavanje računa](images/izdavanje-racuna.png)
 
 ### Pregled i pretraga računa
 
@@ -131,8 +131,8 @@ U tabeli se prikazuje:
 - Klijent
 - Ukupna cijena
 
-![Pregled računa](docs/images/pregled-racuna.png)
-![Pregled računa](docs/images/pretraga-racuna.png)
+![Pregled računa](images/pregled-racuna.png)
+![Pregled računa](images/pretraga-racuna.png)
 
 ---
 
@@ -149,9 +149,9 @@ Svaki korisnik ima:
 - Preferiranu temu
 - Jezik
 
-![Upravljanje korisnicima](docs/images/dodajKorisnika.png)
-![Upravljanje korisnicima](docs/images/urediKorisnika.png)
-![Upravljanje korisnicima](docs/images/obrisiKorisnika.png)
+![Upravljanje korisnicima](images/dodajKorisnika.png)
+![Upravljanje korisnicima](images/urediKorisnika.png)
+![Upravljanje korisnicima](images/obrisiKorisnika.png)
 
 ---
 
@@ -167,7 +167,7 @@ Svi korisnici mogu promijeniti vizuelni izgled aplikacije koji se nalazi u menij
 
 Promjena teme se odmah primjenjuje i pamti se za svakog korisnika.
 
-![Promjena teme](docs/images/change-theme.png)
+![Promjena teme](images/change-theme.png)
 
 ### Promjena jezika
 
@@ -177,7 +177,7 @@ Svi korisnici mogu birati jezik interfejsa:
 
 Nakon promjene, cijela aplikacija se prebacuje na izabrani jezik.
 
-![Promjena jezika](docs/images/change-language.png)
+![Promjena jezika](images/change-language.png)
 
 ---
 
