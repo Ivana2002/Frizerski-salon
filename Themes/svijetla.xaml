@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="#333333"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#FF4081"/>
+    <SolidColorBrush x:Key="MenuBackground" Color="#F5F5F5"/>
+    <SolidColorBrush x:Key="MenuForeground" Color="#333333"/>
+    <FontFamily x:Key="MainFont">Segoe UI</FontFamily>
+</ResourceDictionary>

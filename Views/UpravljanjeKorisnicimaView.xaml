@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.UpravljanjeKorisnicimaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{DynamicResource BackgroundBrush}">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Upravljanje korisnicima" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Margin="0,0,0,15"
+                   Foreground="{DynamicResource ForegroundBrush}"/>
+
+        <DataGrid x:Name="dgKorisnici"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  Foreground="{DynamicResource ForegroundBrush}"
+                  Background="{DynamicResource BackgroundBrush}"
+                  RowBackground="{DynamicResource BackgroundBrush}"
+                  AlternatingRowBackground="{DynamicResource BackgroundBrush}"
+                  BorderBrush="{DynamicResource AccentBrush}">
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Korisničko ime" Binding="{Binding KorisnickoIme}" Width="120"/>
+                <DataGridTextColumn Header="Ime" Binding="{Binding Ime}" Width="100"/>
+                <DataGridTextColumn Header="Prezime" Binding="{Binding Prezime}" Width="100"/>
+                <DataGridTextColumn Header="Uloga" Binding="{Binding Uloga}" Width="80"/>
+                <DataGridTextColumn Header="Tema" Binding="{Binding PreferiranaTema}" Width="100"/>
+                <DataGridTextColumn Header="Jezik" Binding="{Binding JezikKoda}" Width="80"/>
+                <DataGridTemplateColumn Header="Akcije" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="Uredi"
+                                        Tag="{Binding KorisnikId}"
+                                        Click="BtnUredi_Click"
+                                        Margin="0,0,8,0"
+                                        Padding="8,4"
+                                        Background="#FF80AB"
+                                        Foreground="White"
+                                        FontWeight="Bold"
+                                        Cursor="Hand"
+                                        Width="70"/>
+
+                                <Button Content="Obriši"
+                                        Tag="{Binding KorisnikId}"
+                                        Click="BtnObrisi_Click"
+                                        Padding="8,4"
+                                        Background="#F44366"
+                                        Foreground="White"
+                                        FontWeight="Bold"
+                                        Cursor="Hand"
+                                        Width="70"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

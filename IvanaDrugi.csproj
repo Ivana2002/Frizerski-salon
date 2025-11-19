@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\Themes\**" />
+    <EmbeddedResource Remove="Core\Themes\**" />
+    <None Remove="Core\Themes\**" />
+    <Page Remove="Core\Themes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Themes\roze.xaml" />
+    <Page Remove="Themes\svijetla.xaml" />
+    <Page Remove="Themes\tamna.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Themes\roze.xaml" />
+    <Resource Include="Themes\svijetla.xaml" />
+    <Resource Include="Themes\tamna.xaml" />
+  </ItemGroup>
+
+</Project>

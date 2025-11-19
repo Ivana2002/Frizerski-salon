@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.TrenutnoUTokuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Usluge u toku" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Margin="0,0,0,15"
+                   Foreground="{DynamicResource ForegroundBrush}"/>
+
+       
+        <DataGrid x:Name="dgAktivne"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  SelectionMode="Single"
+                  Foreground="{DynamicResource DataGridCellForeground}"
+                  Background="{DynamicResource BackgroundBrush}">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCellForeground}"/>
+                    <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackground}"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{DynamicResource DataGridRowBackground}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCellForeground}"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Klijent" Binding="{Binding Klijent.PunoIme}" Width="150"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Klijent.Telefon}" Width="120"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding DatumVreme, StringFormat=dd.MM.yyyy HH:mm}" Width="140"/>
+                <DataGridTextColumn Header="Usluge" Binding="{Binding Usluge.Count}" Width="80"/>
+                <DataGridTemplateColumn Header="Akcija" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="✅ Završi"
+                                    Click="BtnZavrsi_Click"
+                                    Tag="{Binding RezervacijaId}"
+                                    Padding="8,4"
+                                    Background="{DynamicResource AccentBrush}"
+                                    Foreground="White"
+                                    FontWeight="Bold"
+                                    Cursor="Hand"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+       
+        <TextBlock x:Name="txtPrazno" 
+                   Text="Trenutno nema usluga u toku."
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="18"
+                   Foreground="{DynamicResource ForegroundBrush}"
+                   Grid.Row="1"
+                   Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

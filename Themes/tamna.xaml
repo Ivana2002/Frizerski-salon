@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#2D2D30"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#FF7F50"/>
+    <SolidColorBrush x:Key="MenuBackground" Color="White"/>
+    <SolidColorBrush x:Key="MenuForeground" Color="Black"/>
+    <SolidColorBrush x:Key="LightTextOnDark" Color="Black"/>
+   
+    <SolidColorBrush x:Key="DataGridRowBackground" Color="#333333"/>
+    <SolidColorBrush x:Key="DataGridAlternatingRowBackground" Color="#444444"/>
+    <SolidColorBrush x:Key="DataGridCellForeground" Color="Black"/>
+    
+
+    <FontFamily x:Key="MainFont">Consolas</FontFamily>
+
+    <Style TargetType="DataGridColumnHeader">
+        <Setter Property="Foreground" Value="Black"/>
+       
+        <Setter Property="Background" Value="#E5E5E5"/>
+       
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+</ResourceDictionary>

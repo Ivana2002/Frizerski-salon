@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.ZakazaneRezervacijeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Zakazane rezervacije" FontSize="24" FontWeight="Bold" Margin="0,0,0,15"/>
+
+        <DataGrid x:Name="dgZakazane"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Klijent" Binding="{Binding Klijent.PunoIme}" Width="150"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding DatumVreme, StringFormat=dd.MM.yyyy HH:mm}" Width="140"/>
+                <DataGridTemplateColumn Header="Akcija" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="▶ Započni"
+                                    Tag="{Binding RezervacijaId}"
+                                    Click="BtnZapocni_Click"
+                                    Background="Green"
+                                    Foreground="White"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

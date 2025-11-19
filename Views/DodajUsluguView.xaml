@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.DodajUsluguView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="400" Width="500"
+             Background="{DynamicResource BackgroundBrush}">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Šifra:" Margin="0,0,0,5" Foreground="{DynamicResource ForegroundBrush}"/>
+            <TextBox x:Name="txtSifra" Height="30" Margin="0,0,0,15"
+                     Foreground="{DynamicResource ForegroundBrush}"
+                     Background="{DynamicResource BackgroundBrush}"
+                     BorderBrush="{DynamicResource AccentBrush}"/>
+            <TextBlock Text="Naziv:" Margin="0,0,0,5" Foreground="{DynamicResource ForegroundBrush}"/>
+            <TextBox x:Name="txtNaziv" Height="30" Margin="0,0,0,15"
+                     Foreground="{DynamicResource ForegroundBrush}"
+                     Background="{DynamicResource BackgroundBrush}"
+                     BorderBrush="{DynamicResource AccentBrush}"/>
+            <TextBlock Text="Opis:" Margin="0,0,0,5" Foreground="{DynamicResource ForegroundBrush}"/>
+            <TextBox x:Name="txtOpis" Height="60" TextWrapping="Wrap" Margin="0,0,0,15"
+                     Foreground="{DynamicResource ForegroundBrush}"
+                     Background="{DynamicResource BackgroundBrush}"
+                     BorderBrush="{DynamicResource AccentBrush}"/>
+            <TextBlock Text="Cijena (KM):" Margin="0,0,0,5" Foreground="{DynamicResource ForegroundBrush}"/>
+            <TextBox x:Name="txtCena" Height="30" Margin="0,0,0,15"
+                     Foreground="{DynamicResource ForegroundBrush}"
+                     Background="{DynamicResource BackgroundBrush}"
+                     BorderBrush="{DynamicResource AccentBrush}"/>
+            <TextBlock Text="Trajanje (min):" Margin="0,0,0,5" Foreground="{DynamicResource ForegroundBrush}"/>
+            <TextBox x:Name="txtTrajanje" Height="30" Margin="0,0,0,20"
+                     Foreground="{DynamicResource ForegroundBrush}"
+                     Background="{DynamicResource BackgroundBrush}"
+                     BorderBrush="{DynamicResource AccentBrush}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Odustani" Click="BtnOdustani_Click" Margin="0,0,10,0" Width="100"
+                        Background="{DynamicResource AccentBrush}" Foreground="White"/>
+                <Button Content="Sačuvaj" Click="BtnSacuvaj_Click" Background="{DynamicResource AccentBrush}" Foreground="White" Width="100"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.PregledRezervacijaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{DynamicResource BackgroundBrush}">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Pregled rezervacija" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Margin="0,0,0,15"
+                   Foreground="{DynamicResource ForegroundBrush}"/>
+
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Datum:" Margin="0,0,10,0" Foreground="{DynamicResource ForegroundBrush}"/>
+            <DatePicker x:Name="dpDatum" Width="150"
+                        Foreground="{DynamicResource ForegroundBrush}"
+                        Background="{DynamicResource BackgroundBrush}"
+                        BorderBrush="{DynamicResource AccentBrush}"/>
+            <Button Content="Pretraži" Click="BtnPretraziPoDatumu_Click"
+                    Margin="10,0,0,0"
+                    Padding="10,5"
+                    Background="{DynamicResource AccentBrush}"
+                    Foreground="White"
+                    FontWeight="Bold"/>
+        </StackPanel>
+
+       
+        <DataGrid x:Name="DataGridRezervacije"
+                  Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  Foreground="{DynamicResource ForegroundBrush}"
+                  Background="{DynamicResource BackgroundBrush}"
+                  RowBackground="{DynamicResource BackgroundBrush}"
+                  AlternatingRowBackground="{DynamicResource BackgroundBrush}"
+                  BorderBrush="{DynamicResource AccentBrush}">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Header="Klijent" Binding="{Binding Klijent.PunoIme}" Width="150"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Klijent.Telefon}" Width="120"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding DatumVreme, StringFormat=dd.MM.yyyy HH:mm}" Width="140"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Usluge" Binding="{Binding Usluge.Count}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

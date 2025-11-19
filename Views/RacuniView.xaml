@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.RacuniView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="White">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtNaslov" FontSize="24" FontWeight="Bold" Margin="0,0,0,15" Foreground="Black"/>
+
+        
+        <DataGrid x:Name="DataGridRacuni"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  Foreground="Black"
+                  Background="White"
+                  RowBackground="White"
+                  AlternatingRowBackground="#F8F8F8"
+                  BorderBrush="#FF4081">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Broj računa" Binding="{Binding BrojRacuna}" Width="120"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding DatumIzdavanja, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTextColumn Header="Klijent" Binding="{Binding Klijent.PunoIme}" Width="150"/>
+                <DataGridTextColumn Header="Ukupno" Binding="{Binding UkupnaCijena, StringFormat={}{0:N2} KM}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="IvanaDrugi.Views.KreirajRacunView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="White">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Kreiraj novi račun" FontSize="24" FontWeight="Bold" Margin="0,0,0,15" Foreground="Black"/>
+
+            <TextBlock Text="Broj računa:" Margin="0,0,0,5" Foreground="Black"/>
+            <TextBox x:Name="txtBrojRacuna" Height="30" Margin="0,0,0,15" Foreground="Black" Background="White" BorderBrush="#FF4081"/>
+
+            <TextBlock Text="Datum izdavanja:" Margin="0,0,0,5" Foreground="Black"/>
+            <DatePicker x:Name="dpDatum" Margin="0,0,0,15" Foreground="Black" Background="White" BorderBrush="#FF4081"/>
+
+            <TextBlock Text="Klijent:" Margin="0,0,0,5" Foreground="Black"/>
+            <ComboBox x:Name="cmbKlijenti" Height="30" Margin="0,0,0,15" DisplayMemberPath="PunoIme" Foreground="Black" Background="White" BorderBrush="#FF4081"/>
+
+            <TextBlock Text="Ukupna cijena (KM):" Margin="0,0,0,5" Foreground="Black"/>
+            <TextBox x:Name="txtCijena" Height="30" Margin="0,0,0,15" Foreground="Black" Background="White" BorderBrush="#FF4081"/>
+
+            <Button Content="Izdaj račun" Click="BtnIzdaj_Click"
+                    Height="40" Margin="0,20,0,0"
+                    Padding="15,10"
+                    Background="#FF4081"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

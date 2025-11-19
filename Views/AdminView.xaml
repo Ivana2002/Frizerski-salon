@@ -1,0 +1,60 @@
+﻿<Window x:Class="IvanaDrugi.Views.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:IvanaDrugi.Views"
+        Title="Frizerski Salon - Administrator" Height="600" Width="900">
+    <Grid>
+        <DockPanel>
+           
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Usluge">
+                    <MenuItem Header="Pregled usluga" Click="BtnPregledUsluga_Click"/>
+                    <MenuItem Header="Dodaj novu uslugu" Click="BtnDodajUslugu_Click"/>
+                    <MenuItem Header="Pretraga usluga" Click="BtnPretragaUsluga_Click"/>
+                    <MenuItem Header="Obriši uslugu" Click="BtnObrisiUslugu_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Rezervacije">
+                    <MenuItem Header="Kreiraj rezervaciju" Click="BtnKreirajRezervaciju_Click"/>
+                    <MenuItem Header="Pregled rezervacija" Click="BtnPregledRezervacija_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Računi">
+                    <MenuItem Header="Kreiraj račun" Click="BtnKreirajRacun_Click"/>
+                    <MenuItem Header="Pregled računa" Click="BtnPregledRacuna_Click"/>
+                    <MenuItem Header="Pretraga računa po datumu" Click="BtnPretragaRacuna_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Postavke">
+                    <MenuItem Header="Upravljanje korisnicima" Click="BtnUpravljanjeKorisnicima_Click"/>
+                    <MenuItem Header="Promena tema" Click="BtnPromenaTeme_Click"/>
+                    <MenuItem Header="Promena jezika" Click="BtnPromenaJezika_Click"/>
+                </MenuItem>
+            </Menu>
+
+            
+            <Button Content="➕ Dodaj korisnika" 
+                    Click="BtnDodajKorisnika_Click" 
+                    HorizontalAlignment="Left" 
+                    Margin="0,0,0,15"
+                    Padding="12,6"
+                    Background="#FF4081"
+                    Foreground="White"
+                    FontWeight="SemiBold"
+                    FontSize="14"
+                    Cursor="Hand"
+                    BorderBrush="Transparent">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="6" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            
+            <ContentControl x:Name="MainContent" Margin="20"/>
+        </DockPanel>
+    </Grid>
+</Window>
