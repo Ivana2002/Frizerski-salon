@@ -32,6 +32,7 @@ Ukoliko kredencijali nisu ispravni, pojavljuje se poruka:
 
 ![Prijava](images/pogresanLogin.png)
 
+
 Nakon uspješne prijave, korisniku se prikazuje **glavni meni** prilagođen njegovoj ulozi.
 
 ---
@@ -42,7 +43,9 @@ Nakon prijave, otvara se **glavna stranica „Usluge u toku“**, koja prikazuje
 
 Radnici vide sledeće opcije u meniju:
 
+
 ![Glavni meni](images/main-menuRadnik.png)
+
 
 - **Usluge** → Pregled usluga
 - **Rezervacije** → Kreiranje i pregled rezervacija
@@ -50,6 +53,8 @@ Radnici vide sledeće opcije u meniju:
 
 
 Administrator vidi sve ove opcije, plus:
+
+
 ![Glavni meni](images/main-menuAdministrator.png)
 
 - **Postavke** → Upravljanje korisnicima, promena teme i jezika
@@ -71,9 +76,13 @@ Administrator može:
 - **Obrisati uslugu** – klikom na ❌ pored usluge
 - **Pretražiti uslugu po nazivu** - unosom željene usluge
 - 
+- 
 ![Pregled usluga](images/servicesAdministrator.png)
 
+
+
 Radnici mogu samo **pregledati** i **pretraživati usluge** po nazivu.
+
 
 ![Pregled usluga](images/servicesRadnik.png)
 
@@ -91,6 +100,7 @@ Radnici mogu kreirati novu rezervaciju za klijenta:
 
 Nakon kreiranja, rezervacija se automatski prikazuje u **„Usluge u toku“**.
 
+
 ![Kreiranje rezervacije](images/create-reservation.png)
 
 
@@ -104,12 +114,18 @@ Svi korisnici mogu pregledati postojеće rezervacije sa:
 - Telefonом
 - Datumom
 - Statusom (**zakazano**, **u_toku**, **zavrseno**)
+  
 
-  ![Pregled rezervacija](images/pregled-reservations.png)
+ ![Pregled rezervacija](images/pregled-reservations.png)
+
+ 
 
 Administrator i radnik mogu **započeti** rezervaciju (prebaciti u „u_toku“) i **završiti** je (izdati račun).
 
+
 ![Kreiranje rezervacije](images/zakazane-reservation.png)
+
+
 
 ![Kreiranje rezervacije](images/u-toku-reservation.png)
 
@@ -124,7 +140,11 @@ Nakon završetka usluge (klikom na „✅ Završi“), sistem **automatski**:
 2. Kreira račun sa brojem, datumom i klijentom
 3. Čuva račun u bazi
 
+
+
 ![Izdavanje računa](images/izdavanje-racuna.png)
+
+
 
 ### Pregled i pretraga računa
 
@@ -137,6 +157,8 @@ U tabeli se prikazuje:
 - Datum
 - Klijent
 - Ukupna cijena
+
+  
 
 ![Pregled računa](images/pregled-racuna.png)
 
@@ -160,9 +182,13 @@ Svaki korisnik ima:
 
 ![Upravljanje korisnicima](images/dodajKorisnika.png)
 
+
 ![Upravljanje korisnicima](images/urediKorisnika.png)
 
+
 ![Upravljanje korisnicima](images/obrisiKorisnika.png)
+
+
 
 ---
 
@@ -178,7 +204,10 @@ Svi korisnici mogu promijeniti vizuelni izgled aplikacije koji se nalazi u menij
 
 Promjena teme se odmah primjenjuje i pamti se za svakog korisnika.
 
+
 ![Promjena teme](images/change-theme.png)
+
+
 
 ### Promjena jezika
 
